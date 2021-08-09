@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  &:focus,
+  &:active{
+    outline: none;
+  }
+}
+img{
+  pointer-events: none;
+}
+body{
+  background: #243742;
+  font-family: 'Raleway';
+}
+.bg{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  mix-blend-mode: color-dodge;
+  opacity: 0.25;  
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
