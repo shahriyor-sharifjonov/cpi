@@ -1,0 +1,62 @@
+.intro{
+  margin-top: 81px;
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 250px;
+  }
+  &__title{
+    font-family: 'Misto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 140%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    -webkit-text-stroke: 0.5px #4B68FF;
+    max-width: 830px;
+  }
+  &__btn{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #B1FFFF;
+    text-shadow: 0px 0px 5px rgba(177, 255, 255, 0.7);
+    background: #4B68FF;
+    box-shadow: 0px 2px 25px rgba(75, 104, 255, 0.8);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 35px;
+    transition: 200ms ease;
+    &:hover{
+      color: #404046;
+      text-shadow: 0px 0px 5px rgba(177, 255, 255, 0.7);
+      background: #B1FFFF;
+      box-shadow: 0px 2px 25px #25F8F4;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: -2px;
+      bottom: -2px;
+      left: -2px;
+      right: -2px;
+      border-radius: 6px;
+      background: radial-gradient(64.13% 115.11% at 60.03% -16.01%, #B1FFFF 0%, #1E9DFF 41.23%, #7668FE 66.48%, #CD6BFF 100%);
+      z-index: -1;
+      transition: 200ms ease;
+    }
+  }
+}
