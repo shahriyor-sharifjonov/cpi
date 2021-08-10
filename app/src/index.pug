@@ -11,9 +11,11 @@ html(lang="ru")
     link(rel="stylesheet", href="styles/index.css")
   body 
     #top  
-    img(src="images/bg.webp", alt="").bg
-    include components/header.pug 
-    +header
-    include components/intro.pug 
-    +intro
+    .vis
+      img(src="images/bg.webp", alt="").bg
+      include components/header.pug 
+      +header
+      include components/intro.pug 
+      +intro
+    .space
     script(src="scripts/index.js") 

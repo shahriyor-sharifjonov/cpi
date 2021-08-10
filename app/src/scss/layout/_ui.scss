@@ -23,7 +23,12 @@ body{
   width: 100%;
   min-height: 100%;
   mix-blend-mode: color-dodge;
-  opacity: 0.25;  
+  opacity: 0.4;  
+  object-fit: cover;
+}
+.vis{
+  overflow: hidden;
+  position: relative;
 }
 ul{
   list-style: none;
@@ -31,4 +36,10 @@ ul{
 a{
   text-decoration: none;
   color: #fff; 
+}
+
+.space{
+  position: relative;
+  height: 100px;
+  width: 100%;
 }

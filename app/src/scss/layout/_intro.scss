@@ -71,15 +71,15 @@
     align-items: flex-end;
     width: 100%;
     padding-top: 200px;
-    padding-bottom: 250px;
+    padding-bottom: 463px;
     @include media($xxl){
-      padding-top: 360px;
+      padding-top: 400px;
       padding-bottom: 200px;
     }
     @include media($xl){
       flex-direction: column;
       align-items: center;
-      padding-bottom: 50px;
+      padding-bottom: 100px;
     }
     @include media($lg){
       padding-top: 300px;
@@ -89,6 +89,7 @@
     }
     @include media($sm){
       padding-top: 190px;
+      padding-bottom: 140px;
     }
     @include media(530){
       padding-top: 140px;
