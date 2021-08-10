@@ -14,6 +14,7 @@
     z-index: -3;
     @include media(1500){
       padding-left: 15px;
+      display: none;
     }
     @include media(1400){
       display: none;
@@ -70,7 +71,11 @@
     align-items: flex-end;
     width: 100%;
     padding-top: 200px;
-    padding-bottom: 800px;
+    padding-bottom: 250px;
+    @include media(1400){
+      padding-top: 360px;
+      padding-bottom: 200px;
+    }
   }
   &__title{
     font-family: 'Misto';
@@ -84,6 +89,9 @@
     -webkit-text-stroke: 0.5px #4B68FF;
     max-width: 830px;
     z-index: 40;
+    @include media(1400){
+      font-size: 75px;
+    }
   }
   &__btn{
     font-style: normal;
@@ -106,11 +114,16 @@
     position: relative;
     margin-bottom: 35px;
     transition: 200ms ease;
-    &:hover{
-      color: #404046;
-      text-shadow: 0px 0px 5px rgba(177, 255, 255, 0.7);
-      background: #B1FFFF;
-      box-shadow: 0px 2px 25px #25F8F4;
+    @include media(1400){
+      margin-bottom: 20px;
+    }
+    @media (hover: hover){
+      &:hover{
+        color: #404046;
+        text-shadow: 0px 0px 5px rgba(177, 255, 255, 0.7);
+        background: #B1FFFF;
+        box-shadow: 0px 2px 25px #25F8F4;
+      }
     }
     &::before{
       content: '';
