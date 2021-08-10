@@ -1,11 +1,76 @@
 .intro{
   margin-top: 81px;
+  position: relative; 
+  &__top{
+    position: relative;
+    height: 50px;
+    margin: 0 auto;
+    top: 20px;
+    left: 0px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: -3;
+    @include media(1500){
+      padding-left: 15px;
+    }
+    @include media(1400){
+      display: none;
+    }
+    &-inner{
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+    }
+    &-item{
+      display: flex;
+      align-items: center;
+      &__parent{
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      &__img{
+        margin-right: 35px;
+        @include media(1780){
+          max-width: 50px;
+        }
+        @include media(1500){
+          margin-right: 20px;
+        }
+      }
+      &__p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        background: radial-gradient(64.13% 115.11% at 60.03% -16.01%, #B1FFFF 0%, #1E9DFF 41.23%, #7668FE 66.48%, #CD6BFF 100%);;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        margin-right: 40px;
+        @include media(1780){
+          font-size: 20px;
+        }
+        @include media(1500){
+          margin-right: 30px;
+        }
+      }
+    }
+  }
   &__body{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    margin-top: 250px;
+    padding-top: 200px;
+    padding-bottom: 800px;
   }
   &__title{
     font-family: 'Misto';
@@ -18,6 +83,7 @@
     color: #4F4F4F;
     -webkit-text-stroke: 0.5px #4B68FF;
     max-width: 830px;
+    z-index: 40;
   }
   &__btn{
     font-style: normal;
@@ -58,5 +124,13 @@
       z-index: -1;
       transition: 200ms ease;
     }
+  }
+  &__bg{
+    z-index: -2;
+    position: absolute;
+    top: -80px;
+    max-width: 100%;
+    width: 100%;
+    object-position: bottom;
   }
 }
