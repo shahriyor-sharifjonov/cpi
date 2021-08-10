@@ -72,9 +72,29 @@
     width: 100%;
     padding-top: 200px;
     padding-bottom: 250px;
-    @include media(1400){
+    @include media($xxl){
       padding-top: 360px;
       padding-bottom: 200px;
+    }
+    @include media($xl){
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+    @include media($lg){
+      padding-top: 300px;
+    }
+    @include media($md){
+      padding-top: 233px;
+    }
+    @include media($sm){
+      padding-top: 190px;
+    }
+    @include media(530){
+      padding-top: 140px;
+    }
+    @include media(440){
+      padding-top: 100px;
     }
   }
   &__title{
@@ -89,8 +109,40 @@
     -webkit-text-stroke: 0.5px #4B68FF;
     max-width: 830px;
     z-index: 40;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: linear-gradient(90.13deg, #FFFFFF 0.1%, #FFFFFF 96.9%);
+      filter: blur(100px);
+      z-index: -4;
+      @include media($md){
+        width: 200px;
+        height: 200px;
+      }
+    }
     @include media(1400){
       font-size: 75px;
+    }
+    @include media(1200){
+      text-align: center;
+    }
+    @include media($lg){
+      font-size: 55px;
+    }
+    @include media($md){
+      font-size: 44px;
+    }
+    @include media($sm){
+      font-size: 36px;
+    }
+    @include media(422){
+      font-size: 26px;
     }
   }
   &__btn{
@@ -106,8 +158,7 @@
     text-shadow: 0px 0px 5px rgba(177, 255, 255, 0.7);
     background: #4B68FF;
     box-shadow: 0px 2px 25px rgba(75, 104, 255, 0.8);
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
     max-width: 300px;
     width: 100%;
     border-radius: 6px;
@@ -116,6 +167,17 @@
     transition: 200ms ease;
     @include media(1400){
       margin-bottom: 20px;
+    }
+    @include media($xl){
+      margin-top: 50px;
+    }
+    @include media($lg){
+      font-size: 16px;
+    }
+    @include media($sm){
+      padding: 12px 0;
+      max-width: 220px;
+      margin-top: 20px;
     }
     @media (hover: hover){
       &:hover{
@@ -145,5 +207,11 @@
     max-width: 100%;
     width: 100%;
     object-position: bottom;
+    @include media($lg){
+      top: -40px;
+    }
+    @include media($sm){
+      top: -20px;
+    }
   }
 }
