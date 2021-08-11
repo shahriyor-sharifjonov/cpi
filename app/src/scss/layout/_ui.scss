@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  user-select: none;
   &:focus,
   &:active{
     outline: none;
@@ -27,8 +28,17 @@ body{
   object-fit: cover;
 }
 .vis{
-  overflow: hidden;
   position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/mission-stars.webp') center / cover no-repeat;
+    mix-blend-mode: color-dodge;
+    z-index: -1;
+    opacity: 0.4;
+  }
 }
 ul{
   list-style: none;
@@ -37,9 +47,48 @@ a{
   text-decoration: none;
   color: #fff; 
 }
-
 .space{
   position: relative;
   height: 100px;
   width: 100%;
+}
+.title-with-quote{
+  position: relative;
+  font-family: 'Misto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 140%;
+  max-width: max-content;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 auto;
+  @include media($md){
+    font-size: 36px;
+  }
+  @include media($sm){
+    font-size: 26px;
+  }
+  &::before{
+    content: '';
+    background: url('../images/quote-left.webp');
+    position: absolute;
+    width: 53.85px;
+    height: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -73px;
+  }
+  &::after{
+    content: '';
+    background: url('../images/quote-right.webp');
+    position: absolute;
+    width: 53.85px;
+    height: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -73px;
+  }
 }

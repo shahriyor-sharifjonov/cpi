@@ -12,10 +12,11 @@ html(lang="ru")
   body 
     #top  
     .vis
-      img(src="images/bg.webp", alt="").bg
       include components/header.pug 
       +header
       include components/intro.pug 
       +intro
+    include components/mission.pug 
+    +mission
     .space
     script(src="scripts/index.js") 

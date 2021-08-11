@@ -76,6 +76,6 @@ $break-point in $sizes {
 
 @mixin media($size) {
   @media (max-width:#{$size}px) {
-    @content
+    @content;
   }
 }
