@@ -2,11 +2,8 @@
   position: relative;
   padding-top: 200px;
   margin-top: -100px;
-  @include media($md){
-    padding-top: 80px;
-  }
-  @include media($sm){
-    padding-top: 20px;
+  @include media($xl){
+    padding-top: 100px;
   }
   &::before{
     content: '';

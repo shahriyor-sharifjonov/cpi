@@ -1,0 +1,17 @@
+mixin founder()
+  .founder#founder 
+    .founder__body.container
+      h2.founder__title Сердце клуба
+      a(href="#popup").founder__link Мы гордимся каждым участником, <br> <span>Стань новым примером успеха</span>
+      img(src="images/", alt="") 
+  
+  .popup#popup
+    .popup__body
+      h3.popup__title Хочешь развиваться ?
+      a(href="#header").popup__close-btn  
+        img(src="images/close.webp", alt="").popup__close-btn__img
+      p.popup__p чтобы узнать больше о наших программах, оставьте почту. мы расскроем наши секреты и отпавим вам инструкцию
+      form(action="#header").popup__form
+        input(type="tel" placeholder="Номер телефона").popup__input
+        button(type="submit").popup__btn отправить 
+    a(href="#header").popup__close 
