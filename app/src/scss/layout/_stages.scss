@@ -7,11 +7,12 @@
     top: 420px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 420px);
     z-index: -1;
     background: url('../images/stars.webp') center / cover no-repeat;
     @include media($md){
       top: 220px;
+      height: calc(100% - 220px);
     }
   }
   &__body{
@@ -39,14 +40,32 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+    @include media(1200){
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__col{
     max-width: 33.333%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include media(1200){
+      max-width: 500px;
+    }
+    &:not(:last-of-type){
+      @include media(1200){
+        margin-bottom: 25px;
+      }
+    }
     &:nth-child(1){
       .stages__item{
         height: 250px;
         position: relative;
+        @include media(1200){
+          height: 330px;
+        }
         &::before{
           content: '';
           position: absolute;
@@ -56,7 +75,6 @@
           height: 127.01px;
           transform: translate(-50%, -50%);
           background: url('../images/stages-1.webp') center / contain no-repeat;
-          transition: 400ms ease;
         }
       }
     }
@@ -65,6 +83,9 @@
       .stages__item{
         height: 330px;
         position: relative;
+        @include media(1200){
+          height: 330px;
+        }
         &::before{
           content: '';
           position: absolute;
@@ -74,7 +95,6 @@
           height: 93.55px;
           transform: translate(-50%, -50%);
           background: url('../images/stages-2.webp') center / contain no-repeat;
-          transition: 400ms ease;
         }
       }
     }
@@ -82,23 +102,25 @@
       .stages__item{
         height: 450px;
         position: relative;
+        @include media(1200){
+          height: 330px;
+        }
         &::before{
           content: '';
           position: absolute;
           top: 50%;
           left: 50%;
           width: 168px;
-          height: 26.04px;
+          height: 34.04px;
           transform: translate(-50%, -50%);
-          background: url('../images/stages-3.webp') center / contain no-repeat;
-          transition: 400ms ease;
+          background: url('../images/stages-3.webp') 100% 100% / cover no-repeat; 
         }
       }
     }
   }
   &__item{
     width: 100%;
-    background: rgba(99, 99, 99, 0.4);
+    background: #414141;
     backdrop-filter: blur(25px);
     border-radius: 13px;
     margin-bottom: 5px;
@@ -143,6 +165,39 @@
       transition: 200ms ease;
     }
   }
+  &__subtitle{
+    font-family: 'Misto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #F2F2F2;
+  }
+  &__p{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+    color: #B1FFFF;
+  }
+  &__clouds{
+    margin-top: -300px;
+    max-width: 100%;
+    @include media(1400){
+      margin-top: -250px;
+    }
+    @include media(992){
+      margin-top: -150px;
+    }
+    @include media($sm){
+      margin-top: 0;
+    }
+  }
 }
 
 .stages__col:nth-of-type(1) .stages__item:hover{
@@ -158,5 +213,7 @@
 .stages__col:nth-of-type(3) .stages__item:hover{
   &::before{
     background: url('../images/stages-3-hover.webp') center / contain no-repeat;
+    width: 168px;
+    height: 26.04px;
   }
 }
