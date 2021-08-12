@@ -1,5 +1,6 @@
 .founder{
   position: relative;
+  padding-top: 134px;
   @include media(1200){
     margin-top: -200px;
   }
@@ -23,7 +24,7 @@
   }
   &__cloud{
     position: absolute;
-    top: -140px;
+    top: -10px;
     right: 0;
     object-fit: cover;
     max-width: 100%;
@@ -37,6 +38,12 @@
     }
     @include media($md){
       top: 50px;
+    }
+    @include media(500){
+      top: 100px;
+    }
+    @include media(430){
+      top: 150px;
     }
   }
   &__title{
@@ -98,7 +105,7 @@
       flex-direction: column;
       margin-top: 240px;
     }
-    @include media(400){
+    @include media($sm){
       margin-top: 0;
     }
   }
@@ -119,6 +126,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+      &_2{
+        position: relative;
+        right: -100px;
+        width: 50%;
+        z-index: -3;
+        @include media(1524){
+          right: 0;
+        }
+        @include media(1200){
+          width: 100%;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
     &-bottom{
@@ -172,6 +195,22 @@
           left: 4px;
         }
       }
+      &_2{
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        margin: -227px auto 0 auto;
+        position: relative;
+        @include media(1200){
+          margin: -200px auto 0 auto;
+        }
+        @include media($md){
+          margin: -150px auto 0 auto;
+        }
+        @include media(470){
+          margin: -100px auto 0 auto;
+        }
+      }
     }
     &-title{
       font-style: normal;
@@ -207,9 +246,33 @@
           border-radius: 6px;
           z-index: -1;
         }
+        &_2{
+          color: #4B68FF;
+          position: relative;
+          margin-right: 50px;
+          padding-left: 34px;
+          @include media($sm){
+            margin-right: 15px;
+          }
+          &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            background: rgba(64, 64, 70, 0.6);
+            filter: blur(25px);
+            backdrop-filter: blur(13px);
+            border-radius: 6px;
+            z-index: -1;
+          }
+        }
       }
       &_secondary{
         color: #fff;
+        &_2{
+          color: #000;
+        }
       }
     }
     &_with-text{
