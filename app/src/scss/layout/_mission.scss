@@ -78,6 +78,7 @@
       filter: blur(100px);
       backdrop-filter: blur(18px);
       max-width: 995px;
+      z-index: -1;
     }
     &-p{
       font-family: 'Raleway';

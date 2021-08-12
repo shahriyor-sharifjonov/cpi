@@ -101,6 +101,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    &:last-of-type{
+      @include media(1200){
+        flex-direction: column;
+        margin-top: 100px;
+      }
+    }
     @include media(1200){
       flex-direction: column;
       margin-top: 240px;
@@ -137,10 +143,12 @@
         }
         @include media(1200){
           width: 100%;
+          order: -1;
           right: 0;
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin-bottom: 100px;
         }
       }
     }
@@ -201,11 +209,17 @@
         justify-content: center;
         margin: -227px auto 0 auto;
         position: relative;
+        @include media(1400){
+          margin: -190px auto 0 auto;
+        }
         @include media(1200){
-          margin: -200px auto 0 auto;
+          margin: -270px auto 0 auto;
+        }
+        @include media($lg){
+          margin: -225px auto 0 auto;
         }
         @include media($md){
-          margin: -150px auto 0 auto;
+          margin: -173px auto 0 auto;
         }
         @include media(470){
           margin: -100px auto 0 auto;
@@ -215,12 +229,15 @@
     &-title{
       font-style: normal;
       font-weight: 500;
-      font-size: 36px;
+      font-size: 32px;
       line-height: 140%;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-feature-settings: 'pnum' on, 'lnum' on;
       color: #B1FFFF;
+      @include media(1400){
+        font-size: 25px;
+      }
       @include media($lg){
         font-size: 26px;    
       }
@@ -254,18 +271,6 @@
           @include media($sm){
             margin-right: 15px;
           }
-          &::before{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            background: rgba(64, 64, 70, 0.6);
-            filter: blur(25px);
-            backdrop-filter: blur(13px);
-            border-radius: 6px;
-            z-index: -1;
-          }
         }
       }
       &_secondary{
@@ -284,9 +289,12 @@
       margin-top: 200px;
       z-index: 2;
       @include media(1200){
-        margin-top: 80px;
+        margin-top: 100px;
         max-width: 500px;
         width: 100%;
+      }
+      @include media($sm){
+        margin-top: 50px;
       }
     }
     &-p{
