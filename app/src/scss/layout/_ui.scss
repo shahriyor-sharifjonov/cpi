@@ -125,6 +125,10 @@ a{
       right: 58px;
       width: 25px;
       height: 25px;
+      @include media($md){
+        top: 25px;
+        right: 25px;
+      }
       &__img{
         width: 25px;
         height: 25px;
@@ -147,6 +151,9 @@ a{
     transition: 500ms ease;
     opacity: 0;
     transform: perspective(6000px) rotateX(-100deg) translate(-50%, -100%);
+    @include media($md){
+      padding: 25px;
+    }
   }
   &__title{
     font-family: 'Raleway';
@@ -158,7 +165,10 @@ a{
     text-transform: uppercase;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #404046;
-    @include media($md){}
+    @include media($md){
+      font-size: 22px;
+      margin-right: 40px;
+    }
   }
   &__p{
     font-style: normal;
@@ -171,11 +181,21 @@ a{
     color: #404046;
     margin-top: 30px;
     margin-bottom: 100px;
+    @include media($md){
+      font-size: 16px;
+    }
   }
   &__form{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @include media($md){
+      margin-bottom: 25px;
+    }
+    @include media($sm){
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__input{
     max-width: 463px;
@@ -206,6 +226,11 @@ a{
     position: relative; 
     cursor: pointer;
     padding-left: 10px;
+    margin-left: 60px;
+    @include media($sm){
+      margin-top: 25px;
+      margin-left: 0;
+    }
     &::before{
       content: '';
       position: absolute;
