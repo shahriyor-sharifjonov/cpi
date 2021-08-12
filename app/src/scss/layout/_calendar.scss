@@ -47,12 +47,21 @@
     text-transform: uppercase;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #C6C6C6;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
   }
   &__date{
     max-width: 100px;
     width: 100%;
     aspect-ratio: 1 / 1;
-    border: 1px solid #fff;
+    border: 0.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(180deg, rgba(177, 255, 255, 0) 7.6%, rgba(75, 104, 255, 0.2) 100%);    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +73,17 @@
     letter-spacing: 0.03em;
     color: #FFFFFF;
     background: rgba(206, 209, 209, 0.25);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(15px);
+    z-index: 25;
+    @include media($md){
+      font-size: 18px;
+    }
+    &:not(.disabled):hover{
+      border-image-source: linear-gradient(180deg, rgba(177, 255, 255, 0.5) 7.6%, rgba(75, 104, 255, 1) 100%); 
+    }
+    &.active{
+      background: #4B68FF;
+      cursor: pointer;
+    }
   }
 }
