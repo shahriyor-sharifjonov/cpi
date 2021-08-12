@@ -1,6 +1,8 @@
 .result{
   position: relative;
   margin-bottom: 25px;
+  padding-top: 134px;
+  margin-top: -134px;
   &::before{
     content: '';
     position: absolute;
