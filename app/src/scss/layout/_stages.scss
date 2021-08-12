@@ -1,6 +1,9 @@
 .stages{
   padding-top: 134px;
   position: relative;
+  @include media($md){
+    margin-top: -100px;
+  }
   &::before{
     content: '';
     position: absolute;
