@@ -68,10 +68,23 @@
     position: absolute;
     left: 0px;
     top: 167px;
+    &-arrow{
+      @include media($md){
+        max-width: 40px;
+      }
+      &__img{
+        max-width: 100%;
+      }
+    }
     @include media(1014){
       left: 50%;
       transform: translateX(-50%);
-      top: 130px;
+      top: 135px;
+    }
+    @include media(480){
+      left: 50%;
+      transform: translateX(-50%);
+      top: 115px;
     }
     &-btn{
       font-style: normal;
@@ -111,7 +124,7 @@
     max-width: 700px;
     width: 100%;
     @include media(1014){
-      margin-top: 225px;
+      margin-top: 260px;
     }
     &-top{
       display: flex;
@@ -146,6 +159,9 @@
     align-items: center;
     width: 100%;
     cursor: pointer;
+    @include media($sm){
+      font-size: 16px;
+    }
   }
   &__date{
     max-width: 100px;

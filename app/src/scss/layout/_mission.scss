@@ -18,6 +18,7 @@
   }
   &__title{
     margin-bottom: 70px;
+    padding-top: 18px;
     @include media($md){
       margin-bottom: 20px;
     }
@@ -101,7 +102,7 @@
         position: absolute;
         top: -55px;
         left: -70px;
-        font-family: Misto;
+        font-family: 'Misto';
         font-style: normal;
         font-weight: normal;
         font-size: 96px;
@@ -123,7 +124,7 @@
         position: absolute;
         bottom: -55px;
         right: -70px;
-        font-family: Misto;
+        font-family: 'Misto';
         font-style: normal;
         font-weight: normal;
         font-size: 96px;

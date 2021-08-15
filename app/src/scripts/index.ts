@@ -38,23 +38,23 @@ function addActive(el){
     openMonth()
   }, 10);
 }
-function next(el){
-  for(let i = 0; i < ac.length; i++){
-    if(ac[i].classList.contains('active')){
-      console.log('ac');
-      ac[i+1].classList.add('active');
-      btn.innerHTML = ac[i+1].innerHTML;
-      ac[i].classList.remove('active');
-    }
-  }
-}
-function prev(el){
-  for(let i = 0; i < ac.length; i++){
-    if(ac[i].classList.contains('active')){
-      console.log('ac');
-      ac[i-1].classList.add('active');
-      btn.innerHTML = ac[i-1].innerHTML;
-      ac[i].classList.remove('active');
-    }
-  }
-}
+// function next(el){
+//   for(let i = 0; i < ac.length; i++){
+//     if(ac[i].classList.contains('active')){
+//       console.log('ac');
+//       ac[i+1].classList.add('active');
+//       btn.innerHTML = ac[i+1].innerHTML;
+//       ac[i].classList.remove('active');
+//     }
+//   }
+// }
+// function prev(el){
+//   for(let i = 0; i < ac.length; i++){
+//     if(ac[i].classList.contains('active')){
+//       console.log('ac');
+//       ac[i-1].classList.add('active');
+//       btn.innerHTML = ac[i-1].innerHTML;
+//       ac[i].classList.remove('active'); 
+//     }
+//   }
+// }
