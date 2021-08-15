@@ -2,6 +2,30 @@ mixin calendar()
   .calendar#calendar 
     .calendar__body.container
       h2.stages__title Календарь встреч
+      .calendar__month 
+        .calendar__vis 
+          p(onclick="openMonth(this)").calendar__month-btn Август
+          .calendar__vis-content  
+            .calendar__col
+              div(onclick="addActive(this)").calendar__vis-p Янв
+              div(onclick="addActive(this)").calendar__vis-p Фев
+              div(onclick="addActive(this)").calendar__vis-p Мар
+            .calendar__col
+              div(onclick="addActive(this)").calendar__vis-p апр
+              div(onclick="addActive(this)").calendar__vis-p Май
+              div(onclick="addActive(this)").calendar__vis-p июн
+            .calendar__col
+              div(onclick="addActive(this)").calendar__vis-p июл
+              div(onclick="addActive(this)").calendar__vis-p.active авг
+              div(onclick="addActive(this)").calendar__vis-p Сен
+            .calendar__col 
+              div(onclick="addActive(this)").calendar__vis-p окт
+              div(onclick="addActive(this)").calendar__vis-p ноя
+              div(onclick="addActive(this)").calendar__vis-p дек
+          a(href="#!" onclick="next(this)").calendar__month-next.calendar__month-arrow
+            img(src="images/next-arrow.webp", alt="").calendar__month-arrow__img
+          a(href="#!" onclick="prev(this)").calendar__month-prev.calendar__month-arrow
+            img(src="images/left-arrow.webp", alt="").calendar__month-arrow__img  
       .calendar__content 
         .calendar__content-top
           p.calendar__week Пн
