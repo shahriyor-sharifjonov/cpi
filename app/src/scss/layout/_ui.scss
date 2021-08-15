@@ -122,6 +122,9 @@ a{
   opacity: 0;
   visibility: hidden;
   transition: 200ms ease;
+  &.fff{
+    background: rgba(#fff, 0.9);
+  }
   &:target{
     opacity: 1;
     visibility: visible;
@@ -171,6 +174,9 @@ a{
     transform: perspective(6000px) rotateX(-100deg) translate(-50%, -100%);
     @include media($md){
       padding: 25px;
+    }
+    &.grad{
+      background: linear-gradient(180deg, #B9E6FF 0%, #4B68FF 100%);
     }
   }
   &__title{
