@@ -177,6 +177,8 @@ a{
     }
     &.grad{
       background: linear-gradient(180deg, #B9E6FF 0%, #4B68FF 100%);
+      max-width: 1200px;
+      padding-bottom: 15px;
     }
   }
   &__title{
@@ -346,11 +348,23 @@ a{
     }
   }
   &_s{
+    &__tag{
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 30px;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #F2F2F2;
+    }
     &__body-scroll{
       max-height: 100%;
       display: flex;
       flex-direction: column;
       overflow-y: auto;
+      overflow-x: hidden;
       margin-right: -15px;
       padding-right: 15px;
     }
@@ -370,6 +384,60 @@ a{
         flex-direction: column;
         align-items: flex-start;
       }
+      &.gray{
+        margin-bottom: 0;
+        margin-top: -70px;
+        padding-top: 160px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+        background: #353535;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        @include media($lg){
+          margin-top: 0;
+          padding-top: 50px;
+        }
+        p{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 28px;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+          color: #B1FFFF;
+          @include media($md){
+            text-align: center;
+          }
+        }
+        a{
+          background: #4B68FF;
+          box-shadow: 0px 0px 6px rgba(75, 104, 255, 0.7);
+          border-radius: 6px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+          padding: 25px 70px;
+          color: #B1FFFF;
+          text-shadow: 0px 0px 5px rgba(177, 255, 255, 0.7);
+          transition: 200ms ease;
+          @include media($md){
+            padding: 8px 12px;
+            margin-top: 25px;
+          }
+          &:hover{
+            background: #B1FFFF;
+            color: #404046;
+            text-shadow: 0px 0px 5px rgba(177, 255, 255, 0.7);
+          }
+        }
+      }
     }
     &__items{
       display: flex;
@@ -382,17 +450,72 @@ a{
         align-items: center;
         width: 100%;
       }
+      &.lg{
+        @include media($lg){
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-top: 36px;
+        }
+        .popup_s__item{
+          @include media($lg){
+            width: 100%;
+            margin-right: 0;
+            padding-left: 20px;
+            margin-bottom: 30px;
+          }
+        }
+      }
     }
     &__item{
       width: 25%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      &-str{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #B1FFFF;
+        width: 100%;
+        &__img{
+          max-width: 35px;
+          object-fit: cover;
+        }
+        &__p{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 180%;
+          letter-spacing: 0.03em;
+          color: #F8F8F8;
+          margin-top: 25px;
+          z-index: 1;
+          &:first-of-type{
+            padding-left: 20px;
+          }
+          @include media($lg){
+            width: 100%;
+            text-align: left;
+          }
+        }
+      }
       &_50{
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include media($md){
+          width: 100%;
+          margin-bottom: 10px;
+        }
       }
       @include media($md){
         width: 100%;
@@ -426,6 +549,9 @@ a{
       text-transform: uppercase;
       color: #4B68FF;
       margin-right: 20px;
+      @include media($sm){
+        font-size: 24px;
+      }
     }
     &__subtitle{
       font-style: normal;
