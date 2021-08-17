@@ -1,6 +1,7 @@
 .intro{
   margin-top: 81px;
   position: relative; 
+  z-index: 1;
   &__top{
     position: relative;
     height: 50px;
@@ -14,9 +15,12 @@
     z-index: -3;
     @include media(1500){
       padding-left: 15px;
-      display: none;
+      // display: none;
     }
     @include media(1400){
+      // display: none;
+    }
+    @include media($md){
       display: none;
     }
     &-inner{
@@ -30,7 +34,7 @@
       display: flex;
       align-items: center;
       &__parent{
-        width: 100%;
+        width: 50%;
         display: flex;
         align-items: center;
       }
@@ -215,5 +219,20 @@
     @include media($sm){
       top: -20px;
     }
+  }
+  &__run{
+    animation: run 60s infinite linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes run {
+  0%{
+    left: -180%;
+  }
+  100%{
+    left: 100%;
   }
 }

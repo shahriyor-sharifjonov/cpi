@@ -1,6 +1,7 @@
 .header{
   position: fixed;
   width: 100%;
+  height: 81px;
   top: 0;
   left: 0;
   display: flex;
@@ -11,15 +12,12 @@
   border-bottom: 2px solid transparent;
   border-image-slice: 1;
   z-index: 47;
-  background: rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(4px);
-  -o-backdrop-filter: blur(4px);
-  -moz-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
   @media (hover: hover){
     &:hover{
       background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(15px);
       border-image-source: linear-gradient(270deg, #B1FFFF 3.5%, #1E9DFF 24.69%, #CD6BFF 52.78%, #7668FE 84.64%);
       .header__logo-img{
         background: url('../images/logo.webp');
@@ -52,20 +50,21 @@
     justify-content: center;
     align-items: center;
     @include media($xl){
-      flex-direction: column;
       position: fixed;
-      z-index: 50;
       top: 0;
       right: 0;
+      bottom: 0;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(13px);
+      width: 320px;
+      flex-direction: column;
+      backdrop-filter: blur(15px);
+      background: rgba(0, 0, 0, 0.98);
       border-left: 2px solid;
       border-image-slice: 1;
       border-image-source: linear-gradient(270deg, #B1FFFF 3.5%, #1E9DFF 24.69%, #CD6BFF 52.78%, #7668FE 84.64%);
-      width: 320px;
       transform: translateX(100%);
       transition: 400ms ease;
+      z-index: 50;
       @include media($sm){
         width: 100%;
         border: none;

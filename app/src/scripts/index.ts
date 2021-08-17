@@ -58,3 +58,8 @@ function addActive(el){
 //     }
 //   }
 // }
+
+// let err = document.querySelector('.error');
+// setTimeout(() => {
+//   err.classList.add('active');
+// }, 10000);

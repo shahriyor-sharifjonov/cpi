@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 200px;
   margin-top: -100px;
+  z-index: 1;
   @include media($xl){
     padding-top: 100px;
   }

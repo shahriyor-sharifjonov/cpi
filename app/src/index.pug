@@ -10,32 +10,23 @@ html(lang="ru")
     link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="styles/index.css")
   body 
+    include components/header.pug 
+    +header
     #all-stars
       #stars
       #stars2
       #stars3
     #top  
-    .vis
-      include components/header.pug 
-      +header
-      include components/intro.pug 
-      +intro
+    include components/intro.pug 
+    +intro
     include components/mission.pug 
     +mission
     include components/we.pug 
     +we 
     include components/founder.pug 
     +founder 
-    #all-stars
-      #stars
-      #stars2
-      #stars3
     include components/stages.pug 
     +stages 
-    #all-stars
-      #stars
-      #stars2
-      #stars3
     include components/result.pug 
     +result 
     include components/calendar.pug 

@@ -30,6 +30,7 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: #B1FFFF;
+      font-family: Verdana, Geneva, sans-serif;
       &:last-of-type{
         @include media($sm){
             margin-top: 15px;

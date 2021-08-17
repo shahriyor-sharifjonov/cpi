@@ -13,7 +13,8 @@ img{
   pointer-events: none;
 }
 body{
-  background: #243742;
+  background: rgb(36,55,66);
+  background: linear-gradient(180deg, rgba(36,55,66,1) 0%, rgba(42,42,42,1) 100%);
   font-family: 'Raleway';
 }
 ::-webkit-scrollbar {
@@ -592,9 +593,9 @@ a{
 
 
 @function multiple-box-shadow ($n) {
-  $value: '#{random(2000)}px #{random(20000)}px #FFF';
+  $value: '#{random(2000)}px #{random(10000)}px #FFF';
   @for $i from 2 through $n {
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+    $value: '#{$value} , #{random(2000)}px #{random(12000)}px #FFF';
   }
 
   @return unquote($value);
