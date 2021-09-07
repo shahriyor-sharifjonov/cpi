@@ -24,8 +24,8 @@
       display: none;
     }
     &-inner{
+      animation: run 6000s infinite linear;
       position: absolute;
-      width: 100%;
       top: 0;
       left: 0;
       display: flex;
@@ -220,19 +220,13 @@
       top: -20px;
     }
   }
-  &__run{
-    animation: run 60s infinite linear;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 }
 
 @keyframes run {
   0%{
-    left: -180%;
+    left: -3600%;
   }
   100%{
-    left: 100%;
+    left: 3600%;
   }
 }
